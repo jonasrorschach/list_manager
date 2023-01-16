@@ -1,3 +1,10 @@
+'''
+·Adicionar uma GUI
+·Fazer com que a lista seja armazenada em um arquivo de extensão .txt
+
+'''
+
+
 from os import system
 from time import sleep
 
@@ -66,8 +73,6 @@ while True:
                 sleep(3)
                 break
             
-            # try: # coloquei try caso any_lista e apagar_num seja truthy
-
             if apagar_num:
                 apagar_int = int(apagar)
                 tamanho_toleravel = len(lista) >= apagar_int
@@ -87,6 +92,7 @@ while True:
                     
                     except:
                         print('O nome do objeto a ser apagador foi digitado errado. Tente novamente.')
+                        syscln(2)
 
 
                 elif tamanho_nao_toleravel:
@@ -99,11 +105,6 @@ while True:
                 break
 
 
-            
-
-            # except:
-            #     ...
-            
 
 
         elif opcao.upper() == 'L':
@@ -133,7 +134,7 @@ while True:
 
     question = input('Quer fazer mais alguma alteração?[S]im ou [N]ão ')
     if question.upper() == 'S':
-        syscln(3)
+        syscln(2)
         continue
     
     elif question.upper() == 'N':
@@ -147,3 +148,5 @@ while True:
     
     else:
         print('Só é permitido "S" para "sim" e "N" para "não". Tente novamente. ')
+
+
